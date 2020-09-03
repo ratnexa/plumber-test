@@ -1,3 +1,4 @@
+library(plumber)
 r <- plumb(file = 'plumber.R')
 r$run(port = 40)
 
