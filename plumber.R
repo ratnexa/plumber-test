@@ -7,24 +7,24 @@ library(tidyverse)
 # plumber.R
 
 # Read model data.
-model.list <- readRDS(file = 'model_list.rds')
+# model.list <- readRDS(file = 'model_list.rds')
 
 #* @param wt
 #* @param qsec
 #* @param am
 #* @post /predict
-CalculatePrediction <- function(wt, qsec, am){
-  wt %<>% as.numeric
-  qsec %<>% as.numeric
-  am %<>% as.numeric
-  
-  x.new <- tibble(wt = wt, qsec = qsec, am = am)
-  y.pred <- model.list$GetNewPredictions(model = model.list$model.obj, 
-                                         transformer = model.list$scaler.obj,
-                                         newdata = x.new)
-  
-  return(y.pred)
-}
+# CalculatePrediction <- function(wt, qsec, am){
+#   wt %<>% as.numeric
+#   qsec %<>% as.numeric
+#   am %<>% as.numeric
+#   
+#   x.new <- tibble(wt = wt, qsec = qsec, am = am)
+#   y.pred <- model.list$GetNewPredictions(model = model.list$model.obj, 
+#                                          transformer = model.list$scaler.obj,
+#                                          newdata = x.new)
+#   
+#   return(y.pred)
+# }
 
 #* @param a
 #* @param b
