@@ -35,7 +35,8 @@ sumSantiago <- function(a, b, c){
   b %<>% as.numeric
   c %<>% as.numeric
   
-  result <- a + b + c
+  #result <- a + b + c
+  result <- data.frame(a,b,c)
   return(result)
 }
 
